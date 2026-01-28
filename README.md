@@ -1,6 +1,3 @@
-<h1 align="center">
-     <br>Self-Supervised Chain-of-Thought Learning for Test-Time Reasoning Enhancement in LLMs
-
 
 Thank you for visiting this repository!
 This repository contains the implementation of our ICML-26 submission, **"Self-Supervised Chain-of-Thought Learning for Test-Time Reasoning Enhancement in LLMs"**.
