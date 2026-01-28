@@ -33,4 +33,3 @@ The configuration files (e.g., `offline_ttlr.yaml`) can be accessed from `exampl
 All evaluation-related scripts are located in the `scripts/eval` folder:
 - For GSM8K, MetaMathQA, LogiQA, and CoLoTa, copy the path to your model inference results into `eval_accuracy.py` and run the script.
 - For MATH, copy the path to your model inference results into `eval_math/eval_math_cl_new.py` and run the script.
-```
