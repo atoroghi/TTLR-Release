@@ -3,33 +3,40 @@
 
 <h4 align="center"></a>
 
+Thank you for visiting this repository!
+This repository contains the implementation of our ICML-26 submission, **"Self-Supervised Chain-of-Thought Learning for Test-Time Reasoning Enhancement in LLMs"**.
 
-## 🔨 Training
+This repository builds upon and reuses substantial parts of the implementation from the excellent [repo](https://github.com/Fhujinwu/TLM/tree/main) of the TTL paper, and the [LlamaFactory](https://github.com/hiyouga/LlamaFactory) library. We are very thankful to both of these groups!
 
-All datasets and their contents from AdaptEval are defined in the `dataset_info.json` file included in this repository. You only need to specify the desired dataset in your configuration file to use it.
 
-For example, to adapt to the geography dataset:
-- For offline test-time learning, you can start training with the following command:
+In order to use the code, please follow these steps:
+## 1- Install requirements
+~~~
+pip install -r requirements.txt
+~~~
+
+## 2- Downloading Datasets
+You can download the datasets used in this work from this [anonymous link](https://drive.google.com/drive/folders/1ffCuF9iYE6AR012Ocj9E2TSUWFsCrN4y?usp=sharing) and place them at `data/AdaptEval`.
+
+If you are interested in generating the CoT augmented datasets yourself, you can use the script at `src/llamafactory/train/ttlr/create_augmented_dataset.py`, and then run `src/llamafactory/train/ttlr/data_pruner.py`.
+
+To perform sample selection, you can use the script at `src/llamafactorytrain/ttlr/data_selector.py`.
+
+## 3- Training
+
+All datasets must be defined in the `dataset_info.json` file included in this repository. You need to specify the desired dataset in your configuration file to use it.
+
+For example, to train using the GSM8k dataset, you can start training with the following command::
 ```bash
-CUDA_VISIBLE_DEVICES=0 llamafactory-cli train examples/train_lora/offline_ttl.yaml
+CUDA_VISIBLE_DEVICES=0 llamafactory-cli train examples/train_lora/offline_ttlr.yaml
 ```
-- For online test-time learning, use:
-```bash
-CUDA_VISIBLE_DEVICES=0 llamafactory-cli train examples/train_lora/online_ttl.yaml
-```
-The `offline_ttl.yaml` and `online_ttl.yaml` files provide example configurations for fine-tuning with test-time learning. These configurations specify parameters about model, fine-tuning method, dataset, TTL method and so on. Please customize these files according to your own requirements.
+The configuration files (e.g., `offline_ttlr.yaml`) can be accessed from `examples/train_lora`.
 
-## ⚖️ Evaluation
+## 4- Evaluation
 
-After running the above training commands, you will obtain the model inference results in the specified `output_dir`. You can then evaluate these results.
-
-First, install the required dependencies:
-```bash
-pip install rouge_score rouge-chinese bert_score git+https://github.com/google-research/bleurt.git
-```
 All evaluation-related scripts are located in the `scripts/eval` folder:
-- For datasets in DomainBench and InstructionBench, copy the path to your model inference results into `eval_simility.py` and run the script.
-- For datasets in ReasoningBench, copy the path to your model inference results into `eval_accuracy.py` and run the script.
+- For GSM8K, MetaMathQA, LogiQA, and CoLoTa, copy the path to your model inference results into `eval_accuracy.py` and run the script.
+- For 
 
 ## 💬 Citation
 Thanks for the open-source code of [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)
