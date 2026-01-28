@@ -1,16 +1,5 @@
 <h1 align="center">
-     <br>Test-Time Learning for Large Language Models
-<p align="center">
-    <a href="https://openreview.net/pdf?id=iCYbIaGKSR">
-        <img alt="Static Badge" src="https://img.shields.io/badge/Paper-ICML-red">
-    </a>
-    <a href="https://huggingface.co/datasets/Jinwu01/AdaptEval/">
-        <img alt="Static Badge" src="https://img.shields.io/badge/HFDataset-AdaptEval-yellow">
-    </a>
-    <a href="https://huggingface.co/Jinwu01/TLM">
-        <img alt="Static Badge" src="https://img.shields.io/badge/HFModel-TLM-blue">
-    </a>
-</p>
+     <br>Self-Supervised Chain-of-Thought Learning for Test-Time Reasoning Enhancement in LLMs
 
 <h4 align="center"></a>
      
