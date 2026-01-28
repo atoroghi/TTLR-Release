@@ -1,7 +1,3 @@
-<h1 align="center">
-     <br>Self-Supervised Chain-of-Thought Learning for Test-Time Reasoning Enhancement in LLMs
-
-<h4 align="center"></a>
 
 Thank you for visiting this repository!
 This repository contains the implementation of our ICML-26 submission, **"Self-Supervised Chain-of-Thought Learning for Test-Time Reasoning Enhancement in LLMs"**.
@@ -36,21 +32,4 @@ The configuration files (e.g., `offline_ttlr.yaml`) can be accessed from `exampl
 
 All evaluation-related scripts are located in the `scripts/eval` folder:
 - For GSM8K, MetaMathQA, LogiQA, and CoLoTa, copy the path to your model inference results into `eval_accuracy.py` and run the script.
-- For 
-
-## 💬 Citation
-Thanks for the open-source code of [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)
-
-If you find our work interesting and meaningful, welcome to give a 🌟 to our repo and cite our paper.
-
-```text
-@inproceedings{hutest,
-  title={Test-Time Learning for Large Language Models},
-  author={Hu, Jinwu and Zhang, Zitian and Chen, Guohao and Wen, Xutao and Shuai, Chao and Luo, Wei and Xiao, Bin and Li, Yuanqing and Tan, Mingkui},
-  booktitle={Forty-second International Conference on Machine Learning}
-}
-```
-
-## Star History
-
-![Star History Chart](https://api.star-history.com/svg?repos=Fhujinwu/TLM&type=Date)
+- For MATH, copy the path to your model inference results into `eval_math/eval_math_cl_new.py` and run the script.
