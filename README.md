@@ -3,25 +3,6 @@
 
 <h4 align="center"></a>
 
-## 🔥News
-- *2025-07-31*: Update AdaptEval benchmark and models.
-- *2025-05-27*: We have released our paper on Arxiv.
-- *2025-05-01*: TLM is accepted by ICML2025.
-
-## 🚀Quick Start 
-```bash
-## clone our repo
-git clone https://github.com/Fhujinwu/TLM.git
-cd TLM
-## install TLM environment
-conda create --name tlm --yes python=3.10
-conda activate tlm
-pip install -e ".[torch,metrics]" --no-build-isolation
-```
-## 🗂 Benchmarks and models
-
-- Benchmarks：https://huggingface.co/datasets/Jinwu01/AdaptEval
-- Models: https://huggingface.co/Jinwu01/TLM
 
 ## 🔨 Training
 
