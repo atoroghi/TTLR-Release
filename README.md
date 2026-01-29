@@ -1,6 +1,6 @@
 
 Thank you for visiting this repository!
-This repository contains the implementation of our ICML-26 submission, **"Self-Supervised Chain-of-Thought Learning for Test-Time Reasoning Enhancement in LLMs"**.
+This repository contains the implementation of our ICML-26 submission, **"Sample-Efficient Self-Supervised Chain-of-Thought Learning for Test-Time Reasoning Enhancement in LLMs"**.
 
 This repository builds upon and reuses substantial parts of the implementation from the excellent [repo](https://github.com/Fhujinwu/TLM/tree/main) of the TTL paper, and the [LlamaFactory](https://github.com/hiyouga/LlamaFactory) library. We are very thankful to both of these groups!
 
