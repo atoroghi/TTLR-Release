@@ -237,7 +237,7 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
         model,
         input_ids: torch.Tensor,
         fishers=None,
-        e_margin: float = 2.0,
+        e_margin: float = 0.4,
         d_margin: float = 0.05,
         fisher_beta: float = 50.0,
         max_new_tokens: int = 80,
